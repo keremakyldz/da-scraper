@@ -1,0 +1,12 @@
+{% extends 'base.html'%}
+
+{% block title %}Brands{% endblock %}
+
+{% block content %}
+    <h1> Latest Brands</h1>
+        <ul>
+            {% for brand in latest_brand_list %}
+                <li> {{ brand.brand_name }} - {{brand.price_tag}}€</li>
+            {%endfor%}
+        </ul>
+{% endblock %}
